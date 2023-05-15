@@ -24,7 +24,6 @@ function App() {
   
   return (
     <>
-   
       <FilmListe filmen={filme}
       maintext="Liste der besten Filme aller Zeiten"/>
     </>

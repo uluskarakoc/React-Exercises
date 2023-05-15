@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import "./styles/app.scss";
+
 
 function App() {
   const [users, setUsers] = useState(() => {
@@ -13,7 +13,7 @@ function App() {
       const response = await fetch(API_URL);
       const data = await response.json();
       console.log(data);
-      setUsers(data)
+      setUsers(data);
     };
     if (users.length === 0) {
       fetchData();
@@ -22,7 +22,11 @@ function App() {
     }
   }, [users]);
 
-  return <div className="App"></div>;
+  return (
+    <div className=" flex justify-center align-baseline ">
+      <h1 className="text-5xl font-bold underline text-center bg-orange-500 " >Hello world!</h1>
+    </div>
+  );
 }
 
 export default App;
