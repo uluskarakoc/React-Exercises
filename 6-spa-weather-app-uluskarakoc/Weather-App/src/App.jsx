@@ -2,8 +2,6 @@ import React, { useState, useEffect } from "react";
 import SearchBar from "./components/SearchBar";
 import WeatherInfo from "./components/WeatherInfo";
 import "./App.css";
-import { FaBloggerB } from "react-icons/fa";
-import { WiDayCloudyGusts } from "react-icons/wi";
 
 function App() {
   const [cityName, setCityName] = useState("");
@@ -31,12 +29,10 @@ function App() {
 
   return (
     <div className="App">
-      <h1>
-        <WiDayCloudyGusts /> 
-        Wetter-App
-      </h1>
+      <h1>Wetter-App</h1>
       {/* setze hier die props richtig*/}
       <SearchBar onSearchCity={setCityName} />
+
       {weatherData && <WeatherInfo weatherData={weatherData} />}
     </div>
   );
