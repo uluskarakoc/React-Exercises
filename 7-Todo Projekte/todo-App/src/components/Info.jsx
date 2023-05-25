@@ -1,9 +1,9 @@
 import uebersichtImg from "../assets/uebersicht-components.webp"
 
 const Info = () => (
-  <div className="info">
+  <div className="info header">
     <br />
-    <h2>Component Übersicht</h2>
+    <h1>Component Übersicht</h1>
     <img
       style={{ maxWidth: "500px" }}
       src={uebersichtImg} alt="Übersicht"

@@ -1,0 +1,49 @@
+body {
+  height: 90vh;
+  width: 90vw;
+  background-color: #73a9ad;
+}
+nav {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 4rem;
+  margin-left: 4rem;
+}
+.navItem {
+  margin-left: 2rem;
+  text-decoration: none;
+  color: #f5f0bb;
+}
+.navText {
+  margin-left: 6rem;
+  color: #dbdfaa;
+}
+
+img {
+  
+  width: 200px;
+  height: 200px;
+}
+.cycling,.laufen {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 1rem;
+  
+}
+form{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-left: 10rem;
+
+}
+.form{
+  width: 15rem;
+  margin-bottom: 2rem;
+  padding: .3rem;
+}
+button{
+  width: 15.8rem;
+}
+

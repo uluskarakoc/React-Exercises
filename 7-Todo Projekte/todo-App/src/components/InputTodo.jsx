@@ -1,51 +1,58 @@
 import { useState } from "react";
 
-const InputTodo = ({ addTodoItem }) => {
+const InputTodo = ({addTodoItem}) => {
   // title state soll hier verwendet
-  const [title, setTitle] = useState("");
-  const [error, setError] = useState("");
+  const [title, setTitle] = useState('');
+  const [error, setError] = useState('');
 
   const handleChange = (event) => {
     // auf den eingegeben Text zugreifen
-    const userInput = event.target.value;
+    const userInput = event.target.value
 
     // hier soll title state geändert werden
-    setTitle(userInput);
-  };
+    setTitle(userInput)
+  }
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (title !== "") {
-      addTodoItem(title.trim());
-
+    
+    if(title !== "") {
+      addTodoItem( title.trim() );
+      
       // Formularfeld leeren
-      setTitle("");
+      setTitle('');
 
       // eventuelle error Nachricht leeren
-      setError("");
+      setError('')
+
     } else {
       setError("💀 Bitte Text eingeben");
     }
-  };
+
+
+  }
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="form-container">
       <input
+        className="input-text"
         type="text"
         placeholder="Todo hinzufügen"
         // onChange={handleChange}
         // Alternative, ohne separate Funktion
-        onChange={(e) => setTitle(e.target.value)}
+        onChange={e => setTitle(e.target.value)}
         value={title}
         // hier haben wir jetzt ein two way binding
       />
-      <button>Hinzufügen</button>
+      <button className="input-submit">Hinzufügen</button>
 
-      <p>{error}</p>
+      <p className="submit-warning">{error}</p>
       {/* mit conditional rendering könnte man
       die error message optimieren */}
+      
     </form>
-  );
-};
+  )
+
+}
 
 export default InputTodo;

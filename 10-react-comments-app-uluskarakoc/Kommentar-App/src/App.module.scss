@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+// #root {
+//   margin: 0 auto;
+//   padding: 2rem;
+//   text-align: center;
+// }
+
+.app {
+ height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #F6E1C3;
+}

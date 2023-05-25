@@ -1,26 +1,28 @@
 import InputTodo from "./InputTodo";
 import TodosList from "./TodosList";
-import { useState } from "react";
+import { useState } from 'react';
 import { v4 as uuid } from "uuid";
 
+
 const TodosLogic = () => {
+
   const [todos, setTodos] = useState([
     {
       id: uuid(),
-      title: "Setup development environment",
-      completed: true,
+      title: 'Setup development environment',
+      completed: true
     },
     {
       id: uuid(),
-      title: "Develop website and add content",
-      completed: false,
+      title: 'Develop website and add content',
+      completed: false
     },
     {
       id: uuid(),
-      title: "Deploy to live server",
-      completed: false,
-    },
-  ]);
+      title: 'Deploy to live server',
+      completed: false
+    }
+  ])
 
   // "Todo" Item hinzufügen
   const addTodoItem = (title) => {
@@ -30,18 +32,20 @@ const TodosLogic = () => {
     const newTodo = {
       id: uuid(), //Alternativ z.b. crypto.randomUUID()
       title: title,
-      completed: false,
-    };
+      completed: false
+    }
 
     // newTodosArray besteht aus alten todos (...todos)
     // und dem zuvor erzeugtem neuen todo-object (newTodo)
-    const newTodosArray = [newTodo, ...todos];
+    const newTodosArray = [newTodo, ...todos ]
 
     // newTodosArray unserem state zuordnen
     // (Info: besser wäre über callback, da wir auf unsere
     // "alten" todos zugreifen müssen)
-    setTodos(newTodosArray);
-  };
+    setTodos(newTodosArray)
+  
+  }
+
 
   // hier speichern wir die Daten, deshalb hier die CRUD (Create Read Update  Delete) Operationen (löschen von todos)
   const deleteTodo = (clickedTodoId) => {
@@ -52,20 +56,20 @@ const TodosLogic = () => {
     // das todo array nie selbst direkt ändern darf
     // Hier ist es aber eigentlich überflüssig, das filter schon ein
     // neues Array erstellt
-    const newFilteredArray = [
-      ...todos.filter((todo) => {
-        // alle die nicht geklickt wurden werden im Array bleiben
-        return todo.id !== clickedTodoId;
-      }),
-    ];
-    setTodos(newFilteredArray);
+    const newFilteredArray = [...todos.filter((todo) => {
+      // alle die nicht geklickt wurden werden im Array bleiben
+      return todo.id !== clickedTodoId
+    })
+    ]
+    setTodos(newFilteredArray)
 
     // 2. Möglichkeit ein Todo zu löschen ( ohne desctructerin "...")
     const newTodos = todos.filter((todo) => {
-      return todo.id !== clickedTodoId;
-    });
-    setTodos(newTodos);
-  };
+      return todo.id !== clickedTodoId
+    })
+    setTodos(newTodos)
+
+  }
 
   return (
     <div>
@@ -77,10 +81,14 @@ const TodosLogic = () => {
         mainText="Hi"
       />
     </div>
-  );
-};
+  )
+
+}
 
 export default TodosLogic;
+
+
+
 
 // KEY Erklärung
 /*
