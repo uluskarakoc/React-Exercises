@@ -1,0 +1,15 @@
+.navbar{
+    height: 8.2rem;
+    background-color: #C4DFDF;
+    display: flex;
+    justify-content:flex-start;
+    .navItem{
+       text-decoration: none;
+       margin: 6.5rem 0rem 0rem 1rem;
+       font-size: 1.3rem;
+       color: black;
+       &:hover{
+        text-decoration: underline;
+       }
+    }
+}
