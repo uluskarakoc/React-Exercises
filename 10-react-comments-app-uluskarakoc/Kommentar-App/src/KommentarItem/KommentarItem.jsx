@@ -1,14 +1,30 @@
 import React from "react";
-import styles from "./kommentarItem.module.scss"
+import styles from "./kommentarItem.module.scss";
 
-function KommentarItem({ data },{length}) {
+function KommentarItem({ data }) {
   return (
     <div className={styles.item}>
-      <h2>{length}</h2>
-      <h1> {data.map((el) => el.name)}</h1>
-      <p>{data.map((el) => el.kommentar)}</p>
+      <ul>
+        <p>{data.length}</p>
+        {data.map((el, index) => (
+          <li key={index}>
+            {el.name} {el.kommentar}
+          </li>
+        ))}
+      </ul>
+
+      {/* <button onClick={()=>deleteCommentar(el.id)}>Delete</button> */}
     </div>
   );
 }
 
 export default KommentarItem;
+{
+  /* {data.map((el, index)=>
+<li key={index}>
+    <p>{el.comentar}</p>
+    <div>name:{el.name}</div>
+    <button onClick={()=>deleteCommentar(el.id)}>Delete</button>
+</li>
+)} */
+}

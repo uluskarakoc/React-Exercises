@@ -2,13 +2,16 @@ import React from "react";
 import { useState } from "react";
 import styles from "./form.module.scss";
 
-function Form({ setData }) {
+function Form({ setData }  ) {
   const [kommentar, setKommentar] = useState("");
   const [name, setName] = useState("");
   const onChangeKommentar = (e) => setKommentar(e.target.value);
   const onChangeInput = (e) => setName(e.target.value);
+
   const submitHandeln = (e) => {
     e.preventDefault();
+  
+   
     const neuKommentar = {
       id: crypto.randomUUID(),
       name,

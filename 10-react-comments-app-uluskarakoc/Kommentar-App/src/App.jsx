@@ -9,11 +9,10 @@ function App() {
     return storedData ? JSON.parse(storedData) : [];
   });
 
-  const zahl = data.length;
-  console.log(zahl);
-  const [length, setLength] = useState(zahl);
   
 
+
+ 
   useEffect(() => {
     localStorage.setItem("dataLocal", JSON.stringify(data));
   }, [data]);
@@ -21,8 +20,8 @@ function App() {
   return (
     <div className={styles.app}>
       <p> {length} ali</p>
-      <KommentarItem data={data} length={length} />
-      <Form setData={setData} />
+      <KommentarItem data={data}  />
+      <Form setData={setData}  />
     </div>
   );
 }
