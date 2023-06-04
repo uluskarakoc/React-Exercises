@@ -17,6 +17,7 @@ function KommentarItem({ data, setData }) {
             <p className={styles.paragraph}>{el.kommentar}</p>
             <button onClick={() => deleteCommentar(el.id)}>Delete</button>
           </li>
+          
         ))}
       </ul>
     </div>
