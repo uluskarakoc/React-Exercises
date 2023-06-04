@@ -1,11 +1,12 @@
-import React, { useContext } from 'react';
-import { NoteContext } from '../context/NoteContext';
-import Note from './Note';
+import React, { useContext } from "react";
+import { NoteContext } from "../context/NoteContext";
+import Note from "./Note";
 
 const NoteList = () => {
- // Hole dir hier alle Notes aus dem Context
-
-  // Hier sollen dann alle Notes aus dem Context gerendert werden. Benutze dafür map()
+  const { notes } = useContext(NoteContext);
+  return notes.map((note, index) => (
+    <Note key={index} index={index} note={note} />
+  ));
 };
 
 export default NoteList;

@@ -8,8 +8,8 @@ const Note = ({ note, index }) => {
     <div>
       <h2>{note.title}</h2>
       <p>{note.content}</p>
-      {/* Wass soll hier in die onClick rein? */}
-      <button onClick={null}>Delete</button>
+     
+      <button onClick={()=>deleteNote(index)}>Delete</button>
     </div>
   );
 };

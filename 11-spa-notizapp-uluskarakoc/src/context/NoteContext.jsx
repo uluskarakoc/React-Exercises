@@ -1,16 +1,16 @@
-import React, { useState, createContext } from 'react';
+import React, { useState, createContext } from "react";
 
 export const NoteContext = createContext();
 
 export const NoteProvider = ({ children }) => {
-  const [notes, setNotes] = useState(null); // Soll hier wirklich null stehen?
+  const [notes, setNotes] = useState([]); 
 
   const addNote = (title, content) => {
-    // Hier Fehlt noch Code
+    setNotes([...notes, { title, content }]);
   };
 
   const deleteNote = (index) => {
-    // Hier Fehlt noch Code
+    setNotes(notes.filter((note,i)=>i!==index))
   };
 
   return (

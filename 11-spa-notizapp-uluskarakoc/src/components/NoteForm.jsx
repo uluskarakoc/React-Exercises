@@ -2,12 +2,15 @@ import React, { useState, useContext } from 'react';
 import { NoteContext } from '../context/NoteContext';
 
 const NoteForm = () => {
-  // Hier fehlt addNote aus dem Context
+  const {addNote}=useContext(NoteContext)
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
 
   const handleSubmit = (e) => {
-   // Hier fehlt noch Code
+    e.preventDefault();
+    addNote(title, content);
+    setTitle('');
+    setContent('');
   }
 
   return (
