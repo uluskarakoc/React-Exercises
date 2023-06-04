@@ -28,8 +28,8 @@ function Weather({ city }) {
         <> Wetter wird geladen </>
       ) : (
         <>
-          {" "}
-          {city} hat die Temperatur {currentTemp}!{" "}
+        
+          {city} hat die Temperatur {currentTemp}!
         </>
       )}
     </>

@@ -5,10 +5,15 @@ export const ThemeContext = createContext();
 
 export const ThemeProvider = ({ children }) => {
    const [theme, setTheme] = useState('standard');
-
+   
+const deleteme=()=>{
+    
+}
    return(
-    <ThemeProvider.Provider>
+    <ThemeContext.Provider value={{theme,setTheme,changeDelete}}>
       {children}
-    </ThemeProvider.Provider>
+    </ThemeContext.Provider>
    )
   }
+
+  
