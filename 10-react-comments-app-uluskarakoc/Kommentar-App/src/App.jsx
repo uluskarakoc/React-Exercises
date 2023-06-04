@@ -4,6 +4,9 @@ import { useState, useEffect } from "react";
 import KommentarItem from "./KommentarItem/KommentarItem";
 
 function App() {
+
+
+  
   const [data, setData] = useState(() => {
     const storedData = localStorage.getItem("dataLocal");
     return storedData ? JSON.parse(storedData) : [];
@@ -16,7 +19,7 @@ function App() {
   return (
     <div className={styles.app}>
       <p> {length} ali</p>
-      <KommentarItem data={data}  />
+      <KommentarItem data={data} setData={setData} />
       <Form setData={setData}  />
     </div>
   );

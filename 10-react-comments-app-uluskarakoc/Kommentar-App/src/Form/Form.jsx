@@ -10,8 +10,6 @@ function Form({ setData }  ) {
 
   const submitHandeln = (e) => {
     e.preventDefault();
-  
-   
     const neuKommentar = {
       id: crypto.randomUUID(),
       name,

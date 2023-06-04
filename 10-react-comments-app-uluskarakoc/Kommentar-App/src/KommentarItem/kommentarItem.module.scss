@@ -1,6 +1,6 @@
 .item {
   display: flex;
-  flex-direction: column;
+  justify-content: space-evenly;
   align-items: center;
   background-color: #E9A178;
   height: 20rem;
@@ -9,4 +9,21 @@
   margin-bottom: 1rem;
   position: relative;
   bottom: 8rem;
+  li{
+    display: flex;
+    margin-bottom: .3rem;
+    background-color: aliceblue;
+    justify-content: center;
+    align-items: center;
+    width: 16rem;
+    border-radius: 1rem;
+  }
+  .name{
+    margin-right: .3rem;
+  }
+  .number{
+    position: relative;
+    right: 16rem;
+    bottom: 8rem;
+  }
 }

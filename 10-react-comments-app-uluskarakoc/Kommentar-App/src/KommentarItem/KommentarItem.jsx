@@ -1,19 +1,24 @@
 import React from "react";
 import styles from "./kommentarItem.module.scss";
 
-function KommentarItem({ data }) {
+function KommentarItem({ data, setData }) {
+  const deleteCommentar = (id) => {
+    const deletedCommentar = data.filter((comment) => comment.id !== id);
+    setData(deletedCommentar);
+  };
+
   return (
     <div className={styles.item}>
+      <h2 className={styles.number}>{data.length}</h2>
       <ul>
-        <p>{data.length}</p>
         {data.map((el, index) => (
           <li key={index}>
-            {el.name} {el.kommentar}
+            <div className={styles.name}> {el.name}</div>
+            <p className={styles.paragraph}>{el.kommentar}</p>
+            <button onClick={() => deleteCommentar(el.id)}>Delete</button>
           </li>
         ))}
       </ul>
-
-      {/* <button onClick={()=>deleteCommentar(el.id)}>Delete</button> */}
     </div>
   );
 }
