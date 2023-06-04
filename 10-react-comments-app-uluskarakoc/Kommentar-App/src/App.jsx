@@ -8,10 +8,6 @@ function App() {
     const storedData = localStorage.getItem("dataLocal");
     return storedData ? JSON.parse(storedData) : [];
   });
-
-  
-
-
  
   useEffect(() => {
     localStorage.setItem("dataLocal", JSON.stringify(data));
