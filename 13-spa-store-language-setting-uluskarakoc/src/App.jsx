@@ -1,5 +1,16 @@
 import "./App.css";
 
-function App() {}
+import React from 'react'
+import Header from "./components/Header";
+import Content from "./components/Content";
 
-export default App;
+function App() {
+  return (
+    <>
+    <Header/>
+    <Content/>
+    </>
+  )
+}
+
+export default App

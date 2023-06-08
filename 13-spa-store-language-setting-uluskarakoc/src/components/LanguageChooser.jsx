@@ -1,9 +1,10 @@
-const LanguageChooser = () => {
-  return (
-    <div className="select">
-      <select placeholder="test"></select>
-    </div>
-  );
-};
+import React from 'react'
 
-export default LanguageChooser;
+
+function LanguageChooser() {
+  return (
+    <div>LanguageChooser</div>
+  )
+}
+
+export default LanguageChooser
