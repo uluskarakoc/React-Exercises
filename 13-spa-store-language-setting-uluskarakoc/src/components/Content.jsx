@@ -1,22 +1,21 @@
 import React from "react";
+import { useContext } from "react";
+import { LanguageContext } from "./Context";
+
+
 
 function Content() {
+  const { selectedLanguage, message, setMessage } = useContext(LanguageContext);
 
-
+  if (selectedLanguage === "German") {
+    setMessage("Hallo Welt");
+  } else if (selectedLanguage === "English") {
+    setMessage("Hello World");
+  }
 
   return (
     <div>
-      <label for="cars">Please Select Your Language:</label>
-      <select id="cars">
-        <option value="volvo"  >German</option>
-        <option value="saab">English</option>
-        <option value="vw">Spanish</option>
-        <option value="audi" selected>Arabic</option>
-        <option value="audi" selected>Turkish</option>
-        <option value="audi" selected>French</option>
-        <option value="audi" selected>Dutch</option>
-        <option value="audi" selected>Russian</option>
-      </select>
+      <h2>{message}</h2>;
     </div>
   );
 }
