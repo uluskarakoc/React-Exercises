@@ -74,7 +74,7 @@ function Contact() {
           className="form"
           name="postContent"
           id="post"
-          placeholder="Write Me"
+          
           onChange={onChangeMessage}
         />
 

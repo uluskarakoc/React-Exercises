@@ -5,13 +5,13 @@ import { LanguageContext } from "./Context";
 
 
 function Content() {
-  const { selectedLanguage, message, setMessage } = useContext(LanguageContext);
+  const { message } = useContext(LanguageContext);
 
-  if (selectedLanguage === "German") {
-    setMessage("Hallo Welt");
-  } else if (selectedLanguage === "English") {
-    setMessage("Hello World");
-  }
+  //if (selectedLanguage === "German") {
+  //  setMessage("Hallo Welt");
+  //} else if (selectedLanguage === "English") {
+  //  setMessage("Hello World");
+  //}
 
   return (
     <div>
